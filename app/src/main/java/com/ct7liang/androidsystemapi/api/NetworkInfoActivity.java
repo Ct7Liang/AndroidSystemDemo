@@ -126,7 +126,7 @@ public class NetworkInfoActivity extends AppCompatActivity {
             tvNetInfo2.setText("");
             flowView.setVisibility(View.GONE);
         }
-        setNetDetail();
+
     }
 
     /**
@@ -140,9 +140,6 @@ public class NetworkInfoActivity extends AppCompatActivity {
     }
 
     private void setNetDetail(){
-        if (subscribe1 != null){
-            subscribe1.dispose();
-        }
         subscribe1 = Observable.create(new ObservableOnSubscribe<Long>() {
             @Override
             public void subscribe(ObservableEmitter<Long> emitter) {
