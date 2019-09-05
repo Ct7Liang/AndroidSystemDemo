@@ -3,6 +3,7 @@ package com.ct7liang.androidsystemapi.util;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.TrafficStats;
 import android.net.wifi.ScanResult;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
@@ -12,6 +13,54 @@ import android.telephony.TelephonyManager;
 import java.util.List;
 
 public class NetUtils {
+
+    /**
+     * 获取网络流量数据
+     */
+    public static void getNetFlow(){
+//        static long  getMobileRxBytes()  //获取通过Mobile连接收到的字节总数，不包含WiFi
+//        static long  getMobileRxPackets()  //获取Mobile连接收到的数据包总数
+//        static long  getMobileTxBytes()  //Mobile发送的总字节数
+//        static long  getMobileTxPackets()  //Mobile发送的总数据包数
+//        static long  getTotalRxBytes()  //获取总的接受字节数，包含Mobile和WiFi等
+//        static long  getTotalRxPackets()  //总的接受数据包数，包含Mobile和WiFi等
+//        static long  getTotalTxBytes()  //总的发送字节数，包含Mobile和WiFi等
+//        static long  getTotalTxPackets()  //发送的总数据包数，包含Mobile和WiFi等
+//        static long  getUidRxBytes(int uid)  //获取某个网络UID的接受字节数
+//        static long  getUidRxPackets(int uid)  //获取某个网络UID的接受数据包总数
+//        static long  getUidTxBytes(int uid) //获取某个网络UID的发送字节数
+//        static long  getUidTxPackets(int uid) //获取某个网络UID的发送数据包总数
+    }
+
+    private static String formatSize(long size){
+        if (size < 1024){
+            return size+"B";
+        }else if (size < 1024*1024){
+            return size/1024+"."+size%1024+"K";
+        }else{
+            return size/(1024*1024)+"."+size%(1024*1024)+"M";
+        }
+    }
+    public static String addPoint(long size, boolean isAppend){
+        StringBuffer sb = new StringBuffer();
+        String s1 = String.valueOf(size);
+        int j=0;
+        for (int i = s1.length()-1; i > -1 ; i--) {
+            j++;
+            sb.append(s1.charAt(i));
+            if (j%3==0 && i!=0){
+                j = 0;
+                sb.append(",");
+            }
+        }
+        if (isAppend){
+            String s = formatSize(size);
+            return sb.reverse().toString()+"K (" + s + ")";
+        }else{
+            return sb.reverse().toString();
+        }
+    }
+
 
     /**
      * 判断当前网络是否可用

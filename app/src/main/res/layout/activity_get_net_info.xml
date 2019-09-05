@@ -118,6 +118,170 @@
                 android:layout_alignParentBottom="true"/>
         </RelativeLayout>
 
+
+        <LinearLayout
+            android:id="@+id/view_net_speed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <TextView
+                    android:text="累计发送数据包: "
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:id="@+id/tv_tx_package_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:id="@+id/tv_tx_package"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:layout_toRightOf="@id/tv_tx_package_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#FFFFFF"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <TextView
+                    android:text="累计接收数据包: "
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:id="@+id/tv_rx_package_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:id="@+id/tv_rx_package"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:layout_toRightOf="@id/tv_rx_package_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#FFFFFF"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <TextView
+                    android:text="累计发送数据: "
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:id="@+id/tv_tx_byte_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:id="@+id/tv_tx_byte"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:layout_toRightOf="@id/tv_tx_byte_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#FFFFFF"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <TextView
+                    android:text="累计接收数据: "
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:id="@+id/tv_rx_byte_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:id="@+id/tv_rx_byte"
+                    android:text=""
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:layout_toRightOf="@id/tv_rx_byte_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#FFFFFF"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <TextView
+                    android:text="当前网络速度: "
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:id="@+id/tv_net_speed_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:id="@+id/tv_net_speed"
+                    android:text="0.0k/s"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:layout_toRightOf="@id/tv_net_speed_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#FFFFFF"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentBottom="true"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
     </LinearLayout>
 
 </ScrollView>
