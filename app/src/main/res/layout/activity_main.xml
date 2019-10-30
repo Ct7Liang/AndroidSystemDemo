@@ -29,6 +29,14 @@
                 android:layout_height="wrap_content"
                 android:background="#eeeeee"/>
 
+            <Button
+                android:layout_marginTop="8dp"
+                android:id="@+id/btn2"
+                android:text="系统参数"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#eeeeee"/>
+
         </LinearLayout>
 
     </ScrollView>

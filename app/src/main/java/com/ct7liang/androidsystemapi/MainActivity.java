@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.ct7liang.androidsystemapi.api.NetworkInfoActivity;
+import com.ct7liang.androidsystemapi.api.SystemInfoActivity;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 
 import io.reactivex.disposables.Disposable;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 });
 
         findViewById(R.id.btn1).setOnClickListener(this);
+        findViewById(R.id.btn2).setOnClickListener(this);
     }
 
     @Override
@@ -39,6 +41,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()){
             case R.id.btn1:
                 startActivity(new Intent(MainActivity.this, NetworkInfoActivity.class));
+                break;
+            case R.id.btn2:
+                startActivity(new Intent(MainActivity.this, SystemInfoActivity.class));
                 break;
         }
     }
